@@ -1,0 +1,56 @@
+
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.botonLetra{
+
+    height: 38px;
+    width: 60px;
+    background-color: black;
+    color:darkcyan;
+    font-weight: bold;
+
+    border-color: black;
+    margin-top: 2px;
+
+    
+}
+.FilaSeleccionada{
+
+background-color: dodgerblue!important;
+
+}
+
+.Fila{
+
+    color:black;
+    font-weight: bold;
+    background-color:white;
+}
+
+.Cabecera{
+
+    font-size: 11px;
+    background-color: #25476a !important;
+    color: white !important;
+}
+
+.Pedido{
+    height:350px;
+   
+    background-color:#404040;
+
+    overflow-y:auto;
+}
+
+
+.Detalle{
+    height:550px;
+   
+        background-color:#404040;
+   
+        overflow-y:auto;
+         
+     }

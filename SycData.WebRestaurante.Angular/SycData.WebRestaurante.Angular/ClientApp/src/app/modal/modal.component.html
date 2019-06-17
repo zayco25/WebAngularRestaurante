@@ -1,0 +1,31 @@
+ 
+ <div class="modal-backdrop fade in">
+</div>  
+ 
+<div class="modal fade in" #Registrar role="dialog"  style="display: block"  aria-hidden="true" aria-labelledby="demo-default-modal"  >
+  <div class="modal-dialog"> 
+    <div id="ModalRegistrar"> 
+      <div class="modal-content"> 
+        <!--Modal header-->
+        <div class="modal-header CabeceraModal">
+          <button type="button" class="close" data-dismiss="modal"><i class="pci-cross pci-circle"></i></button>
+          <h4 class="TituloModal">Registrar Mesa </h4>
+        </div>
+
+        <!--Modal body-->
+        <div class="modal-body"> 
+          <div class="panel-body"> 
+            <input type="text" (change)="newname = $event.target.value;" /> 
+            <button type="button" (click)="ok()">OK</button> 
+            <button type="button" (click)="cancel()">Cancel</button> 
+        </div> 
+      </div>
+
+      <!--Modal footer-->
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-default" type="button">Salir</button>
+        <button class="btn btn-primary">Guardar</button>
+      </div>
+    </div>
+  </div>
+

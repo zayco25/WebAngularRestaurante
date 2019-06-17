@@ -1,0 +1,719 @@
+
+<div class="row">
+
+  <div class="col-md-6">
+      <h4>CONTROL DE MESAS</h4>
+  </div>
+
+</div>
+
+
+<input type="hidden" id="TxtIdOperacion" />
+
+<input type="hidden" id="TxtIdTurno" />
+<input type="hidden" id="TxtUsuario" value="@ViewBag.IdUsuario" />
+
+<div class="row">
+
+  <div class="col-md-2 col-xs-2">
+
+
+
+    <div class="PanelMesas">
+
+      <table class="table table-bordered table-hover">
+
+
+        <thead class="Cabecera">
+
+          <tr>
+
+            <td>
+              MESA
+            </td>
+
+
+            <td>
+              E
+            </td>
+          </tr>
+
+        </thead>
+
+        <tbody id="bodymesas">
+
+        </tbody>
+
+      </table>
+
+
+    </div>
+
+
+    <div class="TotalMesas">
+
+
+      <label id="LblNmesas">
+        0
+
+      </label>
+
+    </div>
+
+
+
+
+
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+          <div   style="margin-bottom:4px;">
+
+
+            <button class="btn btn-success Botones" style="height: 35px;" id="BtnImprimirPrevio">AGREGAR </button>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+          <div class="col-md-12">
+
+            <div    style="margin-bottom:4px;">
+
+
+              <button class="btn btn-danger Botones" style="height: 35px;"  id="BtnImprimirPrevio">DSCTO % </button>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+          <div   style="margin-bottom:4px;">
+
+
+            <button class="btn btn-danger Botones" style="height: 35px;" id="BtnImprimirPrevio">DSCTO DIGITADO </button>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+          <div class="col-md-12">
+
+            <div   style="margin-bottom:4px;">
+
+            <input type="text" readonly class="form-control" value="00.00">
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+  </div>
+
+  <div class="col-md-8 col-xs-8">
+
+
+    <div class="row">
+
+
+      <div class="col-md-12 col-xs-12">
+
+        <div class="row">
+
+          <div class="col-md-4 col-xs-4">
+            <div class="Titulos">
+
+
+              <label>CLIENTE:</label>
+              <label class="TextoData" id="LblCliente">CLIENTE EVENTUAL</label>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-md-4  col-xs-3">
+            <div class="Titulos">
+
+
+              <label>USER:</label>
+              <label class="TextoData" id="LblUsuario">SYCDATA</label>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="col-md-2  col-xs-3">
+            <div class="Titulos">
+
+
+              <label>Nº PER:</label>
+              <input type="text" readonly class="TextoData" style="width:50px" value="0" id="TxtNPersonas" />
+            </div>
+
+          </div>
+
+
+
+          <div class="col-md-2  col-xs-2">
+            <div class="Titulos">
+
+
+              <label>CTA:</label>
+              <label class="TextoData" id="LblCuenta">16</label>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+    <div class="row">
+
+
+      <div class="col-md-12">
+        <div class="Detalle">
+
+          <table id="Detallemesa" class="table table-bordered ">
+
+            <thead class="Cabecera">
+
+              <tr>
+
+                <td>
+                  PRODUCTO
+                </td>
+
+                <td>
+                  CNT
+                </td>
+
+                <td>
+                  PRECIO
+                </td>
+                <td>
+                  SUBTOTAL
+                </td>
+
+                <td>
+                  HORA
+                </td>
+
+              </tr>
+            </thead>
+
+            <tbody id="BodyDetalle">
+
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <div class="row">
+
+      <div class="col-md-9">
+
+        <div class="row">
+
+          <div class="col-md-3">
+
+            <label>N° PRODUCTOS</label>
+          </div>
+
+
+          <div class="col-md-3">
+              <input type="text" style="text-align: right;font-size: 11px;" readonly placeholder="Sub Total" value="0" class="form-control" >
+
+
+            </div>
+
+            <div class="col-md-3">
+
+                <label>T PRODUCTOS</label>
+              </div>
+
+
+              <div class="col-md-3">
+                  <input type="text" style="text-align: right;font-size: 11px;" readonly placeholder="Sub Total" value="0" class="form-control" >
+
+
+                </div>
+
+        </div>
+
+
+
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <input type="text" style="text-align: right;font-size: 11px;" readonly placeholder="Sub Total" value="0" class="form-control" >
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <label>MONTO PENDIENTE DE PAGO</label>
+
+              </div>
+
+              <div class="col-md-3">
+
+
+                  <input type="text" style="text-align: right;font-size: 11px;" readonly placeholder="Sub Total" value="0" class="form-control" >
+
+                </div>
+
+
+
+
+          </div>
+
+
+          <div class="row">
+
+              <div class="col-md-3">
+                  <input type="text" style="text-align: right;font-size: 11px;" readonly placeholder="Sub Total" value="0" class="form-control" >
+
+              </div>
+
+
+              <div class="col-md-6">
+
+                  <label>MONTO A DESCONTAR </label>
+
+                </div>
+
+                <div class="col-md-3">
+
+
+                    <input type="text" style="text-align: right;font-size: 11px;" readonly placeholder="Sub Total" value="0" class="form-control" >
+
+                  </div>
+
+
+
+
+            </div>
+
+
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <label>MONTO A PAGAR </label>
+
+                  </div>
+
+                  <div class="col-md-3">
+                      <input type="text" style="text-align: right;font-size: 11px;" readonly placeholder="Sub Total" value="0" class="form-control" >
+
+                    </div>
+
+              </div>
+
+      </div>
+
+      <div class="col-md-3">
+
+
+        <div class="row">
+
+          <div class="col-md-12">
+
+
+              <button class="btn btn-success Botones"     >ACTUALIZAR</button>
+
+          </div>
+
+        </div>
+
+
+
+
+
+        <div class="row" style="margin-top: 4px;">
+
+            <div class="col-md-12">
+
+
+                <button class="btn btn-danger Botones"  (click)="Salir()"     >SALIR</button>
+
+            </div>
+
+          </div>
+
+
+
+
+       </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- (click)="openModal(template)"  -->
+  </div>
+
+  <div class="col-md-2 col-xs-2">
+
+
+    <div class="PanelBotones">
+
+      <div class="row">
+
+        <div class="col-md-12">
+
+          <div class="Botones" style="margin-bottom:4px;">
+
+
+            <button class="btn btn-primary Botones"   (click)="AbrirRegistrarMesa()"     >NUEVA MESA(F3)</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+      <div class="row">
+
+        <div class="col-md-12">
+
+          <div class="Botones" style="margin-bottom:4px;">
+
+
+            <button class="btn btn-success Botones" id="BtnImprimirPrevio">IMPRIMIR PREVIO(F4) </button>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row">
+
+        <div class="col-md-12">
+
+          <div class="Botones" style="margin-bottom:4px;">
+
+
+            <button class="btn btn-info Botones">CAMBIAR MESA(F8) </button>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="row">
+
+        <div class="col-md-12">
+
+          <div class="Botones"  style="margin-bottom:4px;">
+
+
+            <button class="btn btn-warning Botones" id="BtnActualizar">FACTURAR (F2) </button>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+          <div class="col-md-12">
+
+            <div class="Botones"  style="margin-bottom:4px;">
+
+
+              <button class="btn btn-warning Botones" id="BtnActualizar">CERRAR CUENTA (F5) </button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+              <div class="Botones"  style="margin-bottom:4px;">
+
+
+                <button class="btn btn-warning Botones" id="BtnActualizar">LIQUIDACION (F11) </button>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="row">
+
+              <div class="col-md-12">
+
+                <div class="Botones"  style="margin-bottom:4px;">
+
+
+                  <button class="btn btn-warning Botones" id="BtnActualizar">CERRAR OPERACIONES (F12) </button>
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+
+      <div class="row">
+
+          <div class="col-md-12">
+
+            <div class="Botones" style="margin-bottom:4px;">
+
+
+                <button id="BtnSalir" class="btn btn-danger Botones">Salir </button>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+              <div   style="margin-bottom:2px;">
+
+                       <div class="form-group" style="margin-bottom:0px;">
+                         <div style="text-align: right">
+
+
+                         <label style="text-align: right;font-size: 11px;">SUB TOTAL</label>
+                        </div>
+                         <input type="text" style="text-align: right;font-size: 11px;" readonly placeholder="Sub Total" value="00.00" class="form-control" >
+
+                       </div>
+
+              </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+              <div   style="margin-bottom:2px;">
+
+                       <div class="form-group" style="margin-bottom:0px;" >
+                          <div style="text-align: right">
+                         <label style="text-align: right;font-size: 11px;">DESCTO</label>
+                         </div>
+                         <input type="text" style="text-align: right;font-size: 11px;" readonly placeholder="Sub Total" value="00.00" class="form-control" >
+
+                       </div>
+
+              </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <div style="margin-bottom:5px;">
+
+              <div class="form-group" style="margin-bottom:0px;">
+                <div style="text-align: right">
+                  <label style="text-align: right;font-size: 11px;"> TOTAL</label>
+                </div>
+                <input type="text" style="text-align: right;font-size: 11px;" readonly placeholder="Sub Total" value="00.00"
+                  class="form-control">
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+<!-- (click)="modalRef.hide()" -->
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Registrar Nueva Mesa</h4>
+    <button type="button" class="close pull-right" aria-label="Close"     >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+
+
+  </div>
+
+  <div class="modal-footer">
+
+
+
+  </div>
+</ng-template>
+
+
+
+
+
+<div bsModal #RegistroMesas="bs-modal" class="modal fade" tabindex="-1"
+     role="dialog" aria-labelledby="dialog-sizes-name1">
+  <div class="modal-dialog modal-lg modal-max-auto" style="width: 100%!important">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-sizes-name1" class="modal-title pull-left">Registrar Mesas </h4>
+        <button type="button" class="close pull-right" (click)="CerrarModal()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+          <div class="form-group">
+            <label>Nº Mesa
+            </label>
+            <input type="text"   pattern="[0-9]+" title="Mesa" class="form-control" required="required">
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+          <div class="col-md-6">
+
+            <button class="btn btn-primary btn-block" (click)="GuardarMesa()">Guardar</button>
+          </div>
+
+          <div class="col-md-6">
+              <button class="btn btn-danger btn-block" (click)="CerrarModal()">Salir</button>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-top:3px;">
+
+          <div class="col-md-12">
+
+
+            <div class="PanelMesasR"  >
+              <button  *ngFor="let item of ListaMesas"  class="btn btn-primary btnMesa" id="{{item.IdMesa}}"  > {{item.Descripcion}}  </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="load8" id="Progress"   *ngIf="Mostrar">
+    <div class="loader"></div>
+</div>
+
+<!-- <app-modal  *ngIf="showIt" [oldname]="name" (close)="closeModal($event)" ></app-modal> -->

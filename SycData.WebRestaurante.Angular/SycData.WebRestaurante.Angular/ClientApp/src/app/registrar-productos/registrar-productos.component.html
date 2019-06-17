@@ -1,0 +1,644 @@
+<!-- Cabecera -->
+
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <label>
+            PRODUCTO
+          </label>
+
+          <input type="text" [(ngModel)]="Busqueda" #TxtBusqueda  (keyup)="FiltrarbyText()" placeholder="BUSCAR PRODUCTO" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+
+
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>
+                STOCK
+              </label>
+
+              <input type="text" placeholder="STOCK" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>
+                PEDIDO
+              </label>
+
+              <input type="text" placeholder="PEDIDO" #TxtPedido  value="1" class="form-control">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div class="col-md-6">
+
+    <div class="row">
+
+      <div class="col-md-6">
+
+        <button class="btn btn-success btn-block" (click)="AgregarProducto()">REGISTRAR</button>
+      </div>
+
+      <div class="col-md-6">
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <label>MESA</label>
+          </div>
+
+          <div class="col-md-6">
+            <label style="font-size: 40px">50</label>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Productos -->
+
+
+<div class="row">
+
+  <div class="col-md-6">
+
+    <div class="row">
+      <div class="col-md-2">
+
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('A')" >A</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('B')" >B</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('C')" >C</button>
+
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('CH')" >CH</button>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('D')">D</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('E')">E</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('F')">F</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('G')">G</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('H')">H</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('I')">I</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('J')">J</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('K')">K</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('L')">L</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12" style="padding-right: 0px;">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('M')">M</button>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="col-md-8" style="padding-left: 0px;">
+
+        <div class="Detalle">
+
+
+
+          <table id="Detallemesa" class="table table-bordered ">
+
+
+            <thead class="Cabecera">
+
+              <tr>
+
+                <td>
+                  DESCRIPCION
+                </td>
+
+
+                <td>
+                  PRECIO
+                </td>
+
+
+              </tr>
+            </thead>
+
+            <tbody id="BodyDetalle">
+
+              <tr   [ngClass]="{FilaSeleccionada: i==Seleccionada}"  (click)="SeleccionarFila(i,item)"  class="Fila" *ngFor="let item of ProductosProductosFilter ; let i = index" >
+                <td>{{item.Descripcion}}
+                  <input  class="IdProducto" type="hidden" value="{{item.IdProducto}}" >
+                </td >
+                <td style="text-align:right" >{{item.Precio  | number }}</td>
+
+              </tr>
+
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+      <div class="col-md-2">
+
+
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('N')" >N</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('Ñ')">Ñ</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('O')">O</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('P')" >P</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('Q')" >Q</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('R')">R</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('S')" >S</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('T')">T</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('U')">U</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('V')">V</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('W')" >W</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('X')" >X</button>
+
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('Y')" >Y</button>
+
+          </div>
+
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <button class="btn btn-primary btn block botonLetra" (click)="FiltrarProductosbyLeter('Z')" >Z</button>
+
+          </div>
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <div class="col-md-6">
+
+    <div class="row">
+
+      <div class="col-md-8">
+
+        <div class="row">
+
+          <div class="col-4">
+            <button class="btn btn-primary btn-block">GRUPO</button>
+          </div>
+
+          <div class="col-4">
+            <button class="btn btn-primary btn-block">CARTA</button>
+          </div>
+
+          <div class="col-4">
+            <button class="btn btn-primary btn-block" (click)="Todos()" >TODOS</button>
+          </div>
+
+        </div>
+
+
+        <div class="row" style="margin-top: 5px;">
+
+          <div class="col-4">
+            <button class="btn btn-primary btn-block">ZONA</button>
+          </div>
+
+          <div class="col-4">
+            <button class="btn btn-primary btn-block">NO CARTA</button>
+          </div>
+
+
+        </div>
+
+
+
+      </div>
+
+      <div class="col-md-4">
+
+        <button class="btn btn-success btn-block">ENVIAR</button>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- PRODUCTOS DETALLE -->
+
+
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+
+        <div class="Pedido">
+
+          <table id="Detallemesa" class="table table-bordered ">
+
+
+            <thead class="Cabecera">
+
+              <tr>
+
+                <td>
+                  DESCRIPCION
+                </td>
+
+
+                <td>
+                  PRECIO
+                </td>
+
+
+                <td>
+                  CANTIDAD
+                </td>
+
+
+                <td>
+                  TOTAL
+                </td>
+
+                <td>
+                  ELIMIN
+                </td>
+              </tr>
+            </thead>
+
+            <tbody id="BodyDetalle">
+
+                <tr     class="Fila" *ngFor="let item of ProductosDetalle ; let i = index" >
+                    <td>{{item.Descripcion}}
+                      <input  class="IdProducto" type="hidden" value="{{item.IdProducto}}" >
+                    </td >
+                    <td style="text-align:right" >{{item.Precio  | number }}</td>
+                    <td style="text-align:right" >{{item.Cantidad | number }}</td>
+                    <td style="text-align:right" >{{item.Total | number }}</td>
+                    <td> <button class="btn btn-danger" (click)="BorrarProducto(i)" > <i class="demo-pli-cross"></i> </button> </td>
+                
+    
+    
+                  </tr>
+    
+            </tbody>
+
+          </table>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <div class="row">
+
+          <div class="col-md-1">
+            <label>OBS</label>
+
+          </div>
+
+
+
+          <div class="col-md-9">
+
+            <input type="text" class="form-control" placeholder="observacion">
+
+          </div>
+
+
+
+          <div class="col-md-2" style="padding-right: 0px;">
+            <button class="btn btn-info btn-block">Obs.</button>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="row" style="margin-top:5px;">
+
+      <div class="col-md-12">
+
+        <div class="row">
+
+          <div class="col-md-8">
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                
+                  <div class="col-md-4">
+                    <label>ITEMS</label>
+
+                  </div>
+
+                  <div class="col-md-8">
+                    <input type="text" placeholder="ITEMS"  style="text-align: right;font-weight: blod!important"  #TxtItems readonly class="form-control" />
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="col-md-6">
+                  <div class="row">
+                
+                      <div class="col-md-4">
+                        <label>MONTO</label>
+    
+                      </div>
+    
+                      <div class="col-md-8">
+                        <input type="text" #TxtMonto placeholder="MONTO" style="text-align: right;font-weight: blod!important" class="form-control" />
+                      </div>
+    
+                    </div>
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+
+
+          <div class="col-md-4" style="padding-right: 0px;">
+            <button class="btn btn-danger btn-block">SALIR</button>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+</div>
+
+ 
+<div class="load8" id="Progress"   *ngIf="Mostrar">
+    <div class="loader"></div>
+</div>

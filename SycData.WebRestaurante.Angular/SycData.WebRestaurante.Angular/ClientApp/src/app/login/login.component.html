@@ -1,0 +1,161 @@
+<div class="row cuerpo">
+  <div class="col-md-12">
+      <div class="Titulo">
+          <label>INVERSIONES LAGO AZUL E.I.R.L</label>
+      </div>
+      <div class="CuerpoT">
+          <div class="row">
+              <div class="col-md-3" style="padding-left: 0px;">
+                  <div style="margin-top: 127px;">
+                      <img src="assets/img/sycdata1.jpg"   style="height:250px;width:100%;" />
+                  </div>
+              </div>
+
+              <div class="col-md-6">
+                  <div class="Login">
+                      <div class="Formulario">
+                          <div class="Fecha">
+                          </div>
+
+                          <div class="row" style="margin-top: 30px;"> 
+                                  <div class="col-md-1">
+ 
+
+                                  </div>
+                                  <div class="col-md-2" style="padding-left: 0px;">
+
+                                      <label class="TextoF"> CLAVE</label>
+
+                                  </div>
+
+                                  <div class="col-md-6">
+                                      <div style="text-align: left;">
+
+                                          <input type="password" [(ngModel)]="Clave"  class="form-control InputClave" placeholder="CLAVE">
+                                      </div>
+                                  </div> 
+
+                                  <div class="col-md-2"  style="padding-left:0px;padding-right: 0px;">
+
+                                      <button class="btn btn-primary  btn-block BotonesLogin">VER </button>
+                                  </div>
+                                  <div class="col-md-1"> 
+                                  </div> 
+                               
+                          </div>
+
+
+                          <div class="Botones">
+
+
+                              <div class="row" style="margin-top: 10px;margin-left: 0px;margin-right: 0px;">
+
+                                  <div class="col-md-1">
+                                  </div> 
+                                  <div class="col-md-8" style="padding-left: 0px;" >  
+                                      <div class="row">
+                                          <div class="col-md-12" style="padding-left: 0px;"  >
+                                              <div class="BotonContenedor">
+                                                  <button  (click)="BotonNumero(7);" class="btn btn-primary Boton">7 </button>
+                                                  <button  (click)="BotonNumero(8);" class="btn btn-primary Boton">8</button>
+                                                  <button  (click)="BotonNumero(9);" class="btn btn-primary Boton">9</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row" style="margin-top: 10px;">
+                                          <div class="col-md-12" style="padding-left: 0px;">
+                                              <div class="BotonContenedor">
+
+
+                                                  <button  (click)="BotonNumero(7);" class="btn btn-primary Boton">4 </button>
+                                                  <button  (click)="BotonNumero(7);" class="btn btn-primary Boton">5</button>
+                                                  <button (click)="BotonNumero(7);"  class="btn btn-primary Boton">6</button>
+                                              </div>
+                                          </div>
+
+                                      </div>
+
+                                      <div class="row" style="margin-top: 10px;">
+
+                                          <div class="col-md-12" style="padding-left: 0px;">
+                                              <div class="BotonContenedor">
+
+                                                  <button  (click)="BotonNumero(1);" class="btn btn-primary Boton">1 </button>
+                                                  <button  (click)="BotonNumero(2);" class="btn btn-primary Boton">2</button>
+                                                  <button  (click)="BotonNumero(3);" class="btn btn-primary Boton">3</button>
+                                              </div>
+                                          </div>
+                                      </div> 
+                                      <div class="row" style="margin-top: 10px;">  
+                                          <div class="col-md-12" style="padding-left: 0px;">
+                                              <div class="BotonContenedor">
+                                                  <button (click)="BotonNumero(0);"   class="btn btn-primary  Boton">0 </button>
+                                                  <button (click)="Borrar();"   class="btn btn-primary   BotonB">BORRAR</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-2" style="padding-left:0px;padding-right: 0px;">
+                                      <div style="text-align: left;">
+                                          <button class="btn btn-primary BotonIngresar BotonesLogin" (click)="Ingresar();" >
+                                              
+                                                <span> E </span>
+                                                <span> N </span>
+                                                <span> T </span>
+                                                <span> E </span>
+                                                <span> R </span>
+                                        </button>
+                                          <button class="btn btn-primary btn-block     BtnSalir BotonesLogin">SALIR </button>
+                                      </div>
+                                  </div>
+
+                                  <div class="col-md-1">
+                                    </div> 
+                              </div>
+
+
+                          </div>
+
+
+                          <div class="Pie">
+
+                              <label class="TextoPie" style="margin-bottom: 0px;" >SYCDATA RESTAURANTES WEB </label>
+                              <label class="TextoPie">VENTAS Ver 2019.2</label>
+
+
+                          </div>
+
+                      </div>
+
+                  </div>
+
+              </div>
+
+
+              <div class="col-md-3" style="padding-right: 0px;">
+                  <div style="text-align: right;margin-top: 127px;">
+
+
+                      <img src="assets/img/ff.jpeg" 
+                          style="height:250px;width:100%;text-align: right;" />
+                  </div>
+
+              </div>
+
+
+          </div>
+
+      </div>
+
+      <div class="Titulo2">
+          <label>SYCDATA RESTAURANTES WEB</label>
+      </div>
+
+  </div>
+
+
+</div>
+ 
+  <div class="load8" id="Progress"   *ngIf="Mostrar">
+        <div class="loader"></div>
+    </div>
